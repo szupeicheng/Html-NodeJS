@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.image_container{
+    position: relative;
+    width: 500px;
+    height: 350px;
+    background:url('img.jpg');
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+.img_con {
+    position:relative;
+    top: 0px;
+    left: 150px;
+    height:180px;
+    width: 120px;
+    /*border: 1px solid black;*/
+}
+#myP1 {
+   position: relative;
+   /*top: 40px;
+   left: 240px;*/
+   width: 100%;
+   margin: 0 auto;
+   /*width: 300px;
+   height: 50px;*/
+}
+
+p.serif {
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 400;
+}
+p.sansserif {
+    font-family: Arial, Helvetica, sans-serif;
+}
+p.monospace {
+    font-family: "Courier New", "Lucida Console", monosapce;
+}
+p.ex {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    height: 100px;
+    width: 70%;
+    border: 1px solid black;
+    word-break: keep-all;
+    /*width: 100px;*/
+}
+.left {
+    text-align: left;
+    text-indent: 20px;
+}
+sup {
+    vertical-align: super;
+    font-size: smaller;
+</style>
+</head>
+<body>
+<p id="myP" class="sansserif left ex"></p>
+<p id="myP1" class="sansserif"></p><p id="myP2" class="sansserif"></p><p id="myP3" class="sansserif"></p>
+<p id="demo" class="sansserif"></p>
+<br><br>
+<button onclick="bspace()">bspace</button>
+<button onclick="printpage()">Print</button>
+<button onclick="totag()">Tag</button>
+<button onclick="textred()">Red</button>
+<button onclick="nn()">nn</button>
+<button onclick="space()">space</button>
+<button onclick="cons('-')">-</button>
+<button onclick="cons(',')">,</button>
+<button onclick="cons('.')">.</button>
+<button onclick="cons(';')">;</button>
+<button onclick="cons('(')">(</button>
+<button onclick="cons(')')">)</button>
+<button onclick="cons(':')">:</button>
+<button onclick="newline()">newline</button>
+<br><br>
+<button onclick="aitin()">a</button>
+<button onclick="abarin()">a&#772</button>
+<button onclick="agravein()">a&#768</button>
+<button onclick="aacutein()">a&#769</button>
+<button onclick="alatin()">a&#770</button>
+<button onclick="apehin()">a&#781</button>
+<button onclick="Aitin()">A</button>
+<button onclick="Abarin()">A&#772</button>
+<button onclick="Agravein()">A&#768</button>
+<button onclick="Aacutein()">A&#769</button>
+<button onclick="Alatin()">A&#770</button>
+<button onclick="Apehin()">A&#781</button>
+<button onclick="itine()">e</button>
+<button onclick="barine()">e&#772</button>
+<button onclick="graveine()">e&#768</button>
+<button onclick="acuteine()">e&#769</button>
+<button onclick="latine()">e&#770</button>
+<button onclick="pehine()">e&#781</button>
+<button onclick="itinE()">E</button>
+<button onclick="barinE()">E&#772</button>
+<button onclick="graveinE()">E&#768</button>
+<button onclick="acuteinE()">E&#769</button>
+<button onclick="latinE()">E&#770</button>
+<button onclick="pehinE()">E&#781</button>
+<br><br>
+<button onclick="itini()">i</button>
+<button onclick="barini()">i&#772</button>
+<button onclick="graveini()">i&#768</button>
+<button onclick="acuteini()">i&#769</button>
+<button onclick="latini()">i&#770</button>
+<button onclick="pehini()">i&#781</button>
+<button onclick="itinI()">I</button>
+<button onclick="barinI()">I&#772</button>
+<button onclick="graveinI()">I&#768</button>
+<button onclick="acuteinI()">I&#769</button>
+<button onclick="latinI()">I&#770</button>
+<button onclick="pehinI()">I&#781</button>
+<button onclick="itino()">o</button>
+<button onclick="barino()">o&#772</button>
+<button onclick="graveino()">o&#768</button>
+<button onclick="acuteino()">o&#769</button>
+<button onclick="latino()">o&#770</button>
+<button onclick="pehino()">o&#781</button>
+<button onclick="itinO()">O</button>
+<button onclick="barinO()">O&#772</button>
+<button onclick="graveinO()">O&#768</button>
+<button onclick="acuteinO()">O&#769</button>
+<button onclick="latinO()">O&#770</button>
+<button onclick="pehinO()">O&#781</button>
+<br><br>
+<button onclick="itinu()">u</button>
+<button onclick="barinu()">u&#772</button>
+<button onclick="graveinu()">u&#768</button>
+<button onclick="acuteinu()">u&#769</button>
+<button onclick="latinu()">u&#770</button>
+<button onclick="pehinu()">u&#781</button>
+<button onclick="itinU()">U</button>
+<button onclick="barinU()">U&#772</button>
+<button onclick="graveinU()">U&#768</button>
+<button onclick="acuteinU()">U&#769</button>
+<button onclick="latinU()">U&#770</button>
+<button onclick="pehinU()">U&#781</button>
+<button onclick="oditin()">o<svg height='10' width='2'><circle cx='1' cy='2' r='1.3'fill='#000000' /></svg></button>
+<button onclick="odbarin()">o&#772<svg height='10' width='2'><circle cx='1' cy='2' r='1.3'fill='#000000' /></svg></button>
+<button onclick="odgravein()">o&#768<svg height='10' width='2'><circle cx='1' cy='2' r='1.3'fill='#000000' /></svg></button>
+<button onclick="odacutein()">o&#769<svg height='10' width='2'><circle cx='1' cy='2' r='1.3'fill='#000000' /></svg></button>
+<button onclick="odlatin()">o&#770<svg height='10' width='2'><circle cx='1' cy='2' r='1.3'fill='#000000' /></svg></button>
+<button onclick="odpehin()">o&#781<svg height='10' width='2'><circle cx='1' cy='2' r='1.3'fill='#000000' /></svg></button>
+<button onclick="itinOD()">O<svg height='10' width='2'><circle cx='1' cy='2' r='1.3'fill='#000000' /></svg></button>
+<button onclick="barinOD()">O&#772<svg height='10' width='2'><circle cx='1' cy='2' r='1.3'fill='#000000' /></svg></button>
+<button onclick="graveinOD()">O&#768<svg height='10' width='2'><circle cx='1' cy='2' r='1.3'fill='#000000' /></svg></button>
+<button onclick="acuteinOD()">O&#769<svg height='10' width='2'><circle cx='1' cy='2' r='1.3'fill='#000000' /></svg></button>
+<button onclick="latinOD()">O&#770<svg height='10' width='2'><circle cx='1' cy='2' r='1.3'fill='#000000' /></svg></button>
+<button onclick="pehinOD()">O&#781<svg height='10' width='2'><circle cx='1' cy='2' r='1.3'fill='#000000' /></svg></button>
+<br><br>
+<button onclick="cons('b')">b</button>
+<button onclick="cons('c')">c</button>
+<button onclick="cons('g')">g</button>
+<button onclick="cons('h')">h</button>
+<button onclick="cons('j')">j</button>
+<button onclick="cons('k')">k</button>
+<button onclick="cons('l')">l</button>
+<button onclick="cons('m')">m</button>
+<button onclick="barinm()">m&#772</button>
+<button onclick="cons('n')">n</button>
+<button onclick="barinn()">n&#772</button>
+<button onclick="graveinn()">n&#768</button>
+<button onclick="acuteinn()">n&#769</button>
+<button onclick="latinn()">n&#770</button>
+<button onclick="cons('p')">p</button>
+<button onclick="cons('s')">s</button>
+<button onclick="cons('t')">t</button>
+<br><br>
+<button onclick="cons('B')">B</button>
+<button onclick="cons('C')">C</button>
+<button onclick="cons('G')">G</button>
+<button onclick="cons('H')">H</button>
+<button onclick="cons('J')">J</button>
+<button onclick="cons('K')">K</button>
+<button onclick="cons('L')">L</button>
+<button onclick="cons('M')">M</button>
+<button onclick="cons('N')">N</button>
+<button onclick="barinN()">N&#772</button>
+<button onclick="graveinN()">N&#768</button>
+<button onclick="acuteinN()">N&#769</button>
+<button onclick="latinN()">N&#770</button>
+<button onclick="cons('P')">P</button>
+<button onclick="cons('S')">S</button>
+<button onclick="cons('T')">T</button>
+<script>
+var s = "";
+var words = ["Kai","Alice"];
+var dotr = "<svg height='10' width='2'><circle cx='1' cy='2' r='1.3' fill='#000000' /></svg>";
+var od = "<svg height='10' width='2'><circle cx='1' cy='2' r='1.3' fill='#000000' /></svg>" ;
+//WYSIWYG editor function
+function totag() {
+    //alert(s);
+    //var x = "G&#243;&#97; b&#244; &#111;&#225;-kh&#242; kh&#249;&#105;-l<span class='e'>&#97;</span>t, I&#257; b&#244; &#275;ng g&#243;&#97; t&#236;-h&#363;&#105;, B&#244; l&#105;<span class='e'>&#97;</span>h k&#97;-k&#299; ch&#97;&#105;-b&#97;t, L&#226;&#105; k&#233;ng b&#101;h kh&#236; &#234; &#363;&#105;; Ch&#237;-&#363; t&#105;t Ch&#250; &#237;n-chh&#333;&#97;, Th&#97;ng k&#105;&#226;<sup>n</sup> th&#242;-t&#242;ng l&#333;<svg height='10' width='2'><circle cx='1' cy='2' r='1'fill='#000000' /></svg>-t&#244;<svg height='10' width='2'><circle cx='1' cy='2' r='1'fill='#000000' /></svg>, Ch&#250; L&#237; h&#111;&#97;<sup>n</sup>-h&#237; kh&#97;n--g&#243;&#97;, Un&#769;-t&#224;ng l&#243;ng b&#244; chh&#242;-g&#333;<svg height='10' width='2'><circle cx='1' cy='2' r='1'fill='#000000' /></svg>.";
+    //alert(x);
+    //document.getElementById("myP").innerHTML = x ;
+
+    //var para = document.createElement("P");
+    var t = document.createTextNode(s);
+    var word = words[0];
+    var wt = document.createTextNode(word);
+    //para.appendChild(t);
+    //document.getElementById("myP1").innerHTML = s;
+    document.getElementById("demo").appendChild(t);
+    //document.getElementById("demo").appendChild(wt);
+    s = "";
+/*
+for (var i = 0; i < words.length; i++) {
+    word = words[i];
+    wt = document.createTextNode(word);
+    document.getElementById("demo").appendChild(wt);
+}
+*/
+    words = [];
+}
+//Mark important text as red color
+function textred() {
+    var range = window.getSelection().getRangeAt(0);
+    var selectionContents = range.extractContents();
+    var sp = document.createElement("SPAN");
+    sp.style.color = "red";
+    sp.appendChild(selectionContents);
+    range.insertNode(sp);
+}
+//Print this page
+function printpage() {
+    window.print();
+}
+//backspace
+function bspace() {
+    var str = document.getElementById("myP").innerHTML;
+    var n = str.length;
+    //alert(n);
+    var x = str.substr(0, n-1);
+    document.getElementById("myP").innerHTML = x;
+}
+//space
+function space() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + " ";
+    s += " " ;
+    words.push(" ");
+}
+//newline
+function newline() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "<br>";
+    s += "\\n" ;
+}
+//n
+function nn() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "<sup>n</sup>";
+    //s += "<sup>n</sup>";
+    s += "\\";
+    s += "u207F";
+    //words.push("<sup>n</sup>");
+}
+//Input a
+function aitin() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "a";
+    s += "\\" ;  
+    s += "u0061" ;
+    //s += "a" ;
+    words.push("a");
+}
+function abarin() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "a&#772";
+    //s += "a&#772;" ; 
+    s += "\\" ;  
+    s += "u0101" ;
+    //words.push("\u0101");
+}
+function agravein() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "a&#768";
+    //s += "a&#768;"; 
+    s += "\\" ;  
+    s += "u00E0" ;
+}
+function aacutein() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "a&#769";
+    //s += "a&#769;";   
+    s += "\\";
+    s += "u00E1";
+}
+function apehin() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "a&#781";
+    //s += "a&#781;";
+    s += "a" ;
+    s += "\\" ;   
+    s += "u030D" ;
+}
+function alatin() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "a&#770";
+    //s += "a&#770;";   
+    s += "\\";
+    s += "u00E2" ;
+}
+//Input A
+function Aitin() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "A";
+    s += "\\" ;
+    s += "u0041" ;
+    //s += "A" ;
+    //s += "\\" ;
+    //s += "u0041" ;
+}
+function Abarin() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "A&#772";
+    //s += "A&#772" ;   
+    s += "\\" ;
+    s += "u0100" ;
+    //words.push("\u0100");
+}
+function Agravein() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "A&#768";
+    //s += "A&#768";   
+    s += "\\" ;
+    s += "u00C0" ;
+}
+function Aacutein() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "A&#769";
+    //s += "A&#769";   
+    s += "\\" ;
+    s += "u00C1" ;
+}
+function Apehin() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "A&#781";
+    //s += "A&#781";
+    s += "A" ;
+    s += "\\" ;   
+    s += "u030D" ;    
+}
+function Alatin() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "A&#770";
+    //s += "A&#770"; 
+    s += "\\";
+    s += "u00C2" ;  
+}
+//Input e
+function itine() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "e";
+    s += "\\";
+    s += "u0065";
+    //s += "e";
+}
+function barine() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "e&#772";
+    //s += "e&#772";
+    s += "\\";
+    s += "u0113";
+}
+function graveine() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "e&#768";
+    //s += "e&#768";
+    s += "\\";
+    s += "u00E8";
+}
+function acuteine() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "e&#769";
+    //s += "e&#769";
+    s += "\\";
+    s += "u00E9";    
+}
+function pehine() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "e&#781";
+    //s += "e&#781";
+    s += "e\\";
+    s += "u030D";
+}
+function latine() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "e&#770";
+    //s += "e&#770";
+    s += "\\";
+    s += "u00EA";   
+}
+//Input E
+function itinE() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "E";
+    s += "\\";
+    s += "u0045";
+    //s += "E";
+}
+function barinE() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "E&#772";
+    //s += "E&#772";
+    s += "\\";
+    s += "u0112";   
+}
+function graveinE() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "E&#768";
+    //s += "E&#768";
+    s += "\\";
+    s += "u00C8";   
+}
+function acuteinE() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "E&#769";
+    //s += "E&#769";
+    s += "\\";
+    s += "u00C9";  
+}
+function pehinE() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "E&#781";
+    //s += "E&#781";
+    s += "E\\";
+    s += "u030D";  
+}
+function latinE() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "E&#770";
+    //s += "E&#770";
+    s += "\\";
+    s += "u00CA";  
+}
+//Input i
+function itini() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "i";
+    s += "\\";
+    s += "u0069";
+    //s += "i";
+}
+function barini() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "i&#772";
+    //s += "i&#772";
+    s += "\\";
+    s += "u012B";  
+}
+function graveini() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "i&#768";
+    //s += "i&#768";
+    s += "\\";
+    s += "u00EC";  
+}
+function acuteini() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "i&#769";
+    //s += "i&#769";
+    s += "\\";
+    s += "u00ED";  
+}
+function pehini() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "i&#781";
+    //s += "i&#781";
+    s += "i\\";
+    s += "u030D";  
+}
+function latini() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "i&#770";
+    //s += "i&#770";
+    s += "\\";
+    s += "u00EE";  
+}
+//Input I
+function itinI() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "I";
+    s += "\\";
+    s += "u0049";
+    //s += "I";
+}
+function barinI() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "I&#772";
+    //s += "I&#772";
+    s += "\\";
+    s += "u012A";  
+}
+function graveinI() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "I&#768";
+    //s += "I&#768";
+    s += "\\";
+    s += "u00CC";  
+}
+function acuteinI() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "I&#769";
+    //s += "I&#769";
+    s += "\\";
+    s += "u00CD";  
+}
+function pehinI() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "I&#781";
+    //s += "I&#781";
+    s += "I\\";
+    s += "u030D";  
+}
+function latinI() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "I&#770";
+    //s += "I&#770";
+    s += "\\";
+    s += "u00CE";  
+}
+//Input u
+function itinu() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "u";
+    s += "\\";
+    s += "u0075";
+    //s += "u";
+}
+function barinu() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "u&#772";
+    //s += "u&#772";
+    s += "\\";
+    s += "u016B";
+}
+function graveinu() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "u&#768";
+    //s += "u&#768";
+    s += "\\";
+    s += "u00F9";
+}
+function acuteinu() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "u&#769";
+    //s += "u&#769";
+    s += "\\";
+    s += "u00FA";
+}
+function pehinu() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "u&#781";
+    //s += "u&#781";
+    s += "u\\";
+    s += "u030D";
+}
+function latinu() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "u&#770";
+    //s += "u&#770";
+    s += "\\";
+    s += "u00FB";
+}
+//Input U
+function itinU() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "U";
+    s += "\\";
+    s += "u0055";
+    //s += "U";
+}
+function barinU() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "U&#772";
+    //s += "U&#772";
+    s += "\\";
+    s += "u016A";
+}
+function graveinU() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "U&#768";
+    //s += "U&#768";
+    s += "\\";
+    s += "u00D9";
+}
+function acuteinU() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "U&#769";
+    //s += "U&#769";
+    s += "\\";
+    s += "u00DA";
+}
+function pehinU() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "U&#781";
+    //s += "U&#781";
+    s += "U\\";
+    s += "u030D";
+}
+function latinU() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "U&#770";
+    //s += "U&#770";
+    s += "\\";
+    s += "u00DB";
+}
+//Input o
+function itino() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "o";
+    s += "\\";
+    s += "u006F";
+    //s += "o";
+}
+function barino() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "o&#772";
+    //s += "o&#772";
+    s += "\\";
+    s += "u014D";
+}
+function graveino() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "o&#768";
+    //s += "o&#768";
+    s += "\\";
+    s += "u00F2";
+}
+function acuteino() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "o&#769";
+    //s += "o&#769";
+    s += "\\";
+    s += "u00F3";
+}
+function pehino() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "o&#781";
+    //s += "o&#781";
+    s += "o\\";
+    s += "u030D";
+}
+function latino() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "o&#770";
+    //s += "o&#770";
+    s += "\\";
+    s += "u00F4";
+}
+//Input O
+function itinO() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "O";
+    s += "\\";
+    s += "u004F";
+    //s += "O";
+}
+function barinO() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "O&#772";
+    //s += "O&#772";
+    s += "\\";
+    s += "u014C";
+}
+function graveinO() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "O&#768";
+    //s += "O&#768";
+    s += "\\";
+    s += "u00D2";
+}
+function acuteinO() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "O&#769";
+    //s += "O&#769";
+    s += "\\";
+    s += "u00D3";
+}
+function pehinO() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "O&#781";
+    //s += "O&#781";
+    s += "O\\";
+    s += "u030D";
+}
+function latinO() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "O&#770";
+    //s += "O&#770";
+    s += "\\";
+    s += "u00D4";
+}
+//Input OD
+function odotr(a, b) {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + a + b + dotr;
+    s += a + b + dotr ;    
+}
+function itinOD() {
+    var x = document.getElementById("myP").innerHTML;    
+    document.getElementById("myP").innerHTML = x + "O" + od;
+    //s += "O" + od ;
+    s += "O\\" ;
+    s += "u0358";
+    s += "\\";
+    s += "u0020";
+}
+function barinOD() {
+    var x = document.getElementById("myP").innerHTML;    
+    document.getElementById("myP").innerHTML = x + "O&#772" + od;  
+    //s += "O&#772" + od ; 
+    s += "\\";
+    s += "u014C";
+    s += "\\";
+    s += "u0358";
+    s += "\\";
+    s += "u0020";
+}
+function graveinOD() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "O&#768" + od;
+    //s += "O&#768" + od ; 
+    s += "\\";
+    s += "u00D2";
+    s += "\\";
+    s += "u0358";  
+    s += "\\";
+    s += "u0020";
+}
+function acuteinOD() {
+    var x = document.getElementById("myP").innerHTML;    
+    document.getElementById("myP").innerHTML = x + "O&#769" + od;  
+    //s += "O&#769" + od ; 
+    s += "\\";
+    s += "u00D3";
+    s += "\\";
+    s += "u0358";
+    s += "\\";
+    s += "u0020";
+}
+function pehinOD() {
+    var x = document.getElementById("myP").innerHTML;   
+    document.getElementById("myP").innerHTML = x + "O&#781" + od;  
+    //s += "O&#781" + od ;
+    s += "O\\";
+    s += "u030D";
+    s += "\\";
+    s += "u0358";
+    s += "\\";
+    s += "u0020";
+}
+function latinOD() {
+    var x = document.getElementById("myP").innerHTML;    
+    document.getElementById("myP").innerHTML = x + "O&#770" + od;  
+    //s += "O&#770" + od ;
+    s += "\\";
+    s += "u00D4"; 
+    s += "\\";
+    s += "u0358";
+    s += "\\";
+    s += "u0020";
+}
+//Input od
+function oditin() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "o" + dotr;
+    //s += "o" + dotr ;
+    s += "o";
+    s += "\\";
+    s += "u0358";
+    s += "\\";
+    s += "u0020";
+}
+function odbarin() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "o&#772" + dotr;  
+    //s += "o&#772" + dotr ;
+    s += "\\";
+    s += "u014D";
+    s += "\\";
+    s += "u0358";
+    s += "\\";
+    s += "u0020";
+}
+function odgravein() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "o&#768" + dotr;
+    //s += "o&#768" + dotr ; 
+    s += "\\";
+    s += "u00F2";
+    s += "\\";
+    s += "u0358";  
+    s += "\\";
+    s += "u0020";
+}
+function odacutein() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "o&#769" + dotr;  
+    //s += "o&#769" + dotr ; 
+    s += "\\";
+    s += "u00F3";
+    s += "\\";
+    s += "u0358";
+    s += "\\";
+    s += "u0020";
+}
+function odpehin() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "o&#781" + dotr;  
+    //s += "o&#781" + dotr ; 
+    s += "o\\";
+    s += "u030D";
+    s += "\\";
+    s += "u0358";
+    s += "\\";
+    s += "u0020";
+}
+function odlatin() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "o&#770" + dotr;  
+    //s += "o&#770" + dotr ; 
+    s += "\\";
+    s += "u00F4";
+    s += "\\";
+    s += "u0358";
+    s += "\\";
+    s += "u0020";
+}
+//Input n
+function barinm() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "m&#772";
+    //s += "n&#768" ; 
+    s += "m\\";
+    s += "u0304";  
+}
+//Input n
+function barinn() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "n&#772";
+    //s += "n&#768" ; 
+    s += "n\\";
+    s += "u0304";  
+}
+function graveinn() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "n&#768";
+    //s += "n&#768" ; 
+    s += "n\\";
+    s += "u0300";  
+}
+function acuteinn() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "n&#769;";
+    //s += "n&#769;" ;  
+    s += "\\";
+    s += "u0144" ; 
+}
+function latinn() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "n&#770;";
+    s += "n\\";
+    s += "u0302";
+}
+function barinN() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "N&#772";
+    //s += "n&#768" ; 
+    s += "N\\";
+    s += "u0304";  
+}
+function graveinN() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "N&#768";
+    //s += "N&#768" ;   
+    s += "N\\";
+    s += "u0300";  
+}
+function acuteinN() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "N&#769;";
+    //s += "n&#769;" ;  
+    s += "\\";
+    s += "u0143" ; 
+}
+function latinN() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "N&#770;";
+    //s += "n&#770;" ;  
+    s += "N\\";
+    s += "u0302";
+}
+
+//Input consonant
+function cons(x) {
+    var str = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = str + x ;
+    s = s + x ;
+}
+</script>
+</body>
+</html>
