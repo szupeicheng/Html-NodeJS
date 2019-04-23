@@ -1,2 +1,2 @@
 # Html-NodeJS
-UI design of a language learning webpage 
+A language learning webpage using HTML and NodeJS
