@@ -3,22 +3,6 @@
 <head>
 <script src="writefile.js"></script>
 <style>
-.image_container{
-    position: relative;
-    width: 500px;
-    height: 350px;
-    background:url('img.jpg');
-    background-size:contain;
-    background-repeat: no-repeat;
-}
-.img_con {
-    position:relative;
-    top: 0px;
-    left: 150px;
-    height:180px;
-    width: 120px;
-    /*border: 1px solid black;*/
-}
 #myP1 {
    position: relative;
    /*top: 40px;
@@ -164,6 +148,7 @@ sup {
 <button onclick="cons('l')">l</button>
 <button onclick="cons('m')">m</button>
 <button onclick="cons('n')">n</button>
+<button onclick="barinn()">n&#772</button>
 <button onclick="graveinn()">n&#768</button>
 <button onclick="acuteinn()">n&#769</button>
 <button onclick="cons('p')">p</button>
@@ -178,15 +163,21 @@ sup {
 <button onclick="cons('L')">L</button>
 <button onclick="cons('M')">M</button>
 <button onclick="cons('N')">N</button>
+<button onclick="barinN()">N&#772</button>
 <button onclick="graveinN()">N&#768</button>
+<button onclick="acuteinN()">N&#769</button>
 <button onclick="cons('P')">P</button>
 <button onclick="cons('S')">S</button>
 <button onclick="cons('T')">T</button>
 <script>
 var s = "";
 var words = ["Kai","Alice"];
+/*
 var dotr = "<svg height='10' width='2'><circle cx='1' cy='2' r='1.3' fill='#000000' /></svg>";
 var od = "<svg height='10' width='2'><circle cx='1' cy='2' r='1.3' fill='#000000' /></svg>" ;
+*/
+var dotr ="&#856;";
+var od = "&#856;";
 //WYSIWYG editor function
 function totag() {
     //alert(s);
@@ -245,8 +236,12 @@ function space() {
 //n
 function nn() {
     var x = document.getElementById("myP").innerHTML;
+/*
     document.getElementById("myP").innerHTML = x + "<sup>n</sup>";
     s += "<sup>n</sup>";
+*/
+    document.getElementById("myP").innerHTML = x + "&#8319;";
+    s += "&#8319;";
     words.push("<sup>n</sup>");
 }
 //Input a
@@ -754,66 +749,92 @@ function odotr(a, b) {
 }
 function itinOD() {
     var x = document.getElementById("myP").innerHTML;    
-    document.getElementById("myP").innerHTML = x + "O" + od;
-    s += "O" + od ;
+    /* document.getElementById("myP").innerHTML = x + "O" + od; */
+    document.getElementById("myP").innerHTML = x + "O&#856" + "&#160;" ;
+    s += "O" + "&#856;" ;
+/* 
+s += "&#160;" ;
+*/
+    s += "&#8201;" ;
+
 }
 function barinOD() {
     var x = document.getElementById("myP").innerHTML;    
-    document.getElementById("myP").innerHTML = x + "O&#772" + od;  
+    document.getElementById("myP").innerHTML = x + "O&#772" + od + "&#160;" ;  
     s += "O&#772;" + od ; 
+    s += "&#8201;" ;
 }
 function graveinOD() {
     var x = document.getElementById("myP").innerHTML;
-    document.getElementById("myP").innerHTML = x + "O&#768" + od;
+    document.getElementById("myP").innerHTML = x + "O&#768" + od + "&#160;" ;
     s += "O&#768;" + od ;   
+    s += "&#8201;" ;
 }
 function acuteinOD() {
     var x = document.getElementById("myP").innerHTML;    
-    document.getElementById("myP").innerHTML = x + "O&#769" + od;  
+    document.getElementById("myP").innerHTML = x + "O&#769" + od + "&#160;" ;  
     s += "O&#769;" + od ; 
+    s += "&#8201;" ;
+
 }
 function pehinOD() {
     var x = document.getElementById("myP").innerHTML;   
-    document.getElementById("myP").innerHTML = x + "O&#781" + od;  
+    document.getElementById("myP").innerHTML = x + "O&#781" + od + "&#160;" ;  
     s += "O&#781;" + od ;
+    s += "&#8201;" ;
 }
 function latinOD() {
     var x = document.getElementById("myP").innerHTML;    
-    document.getElementById("myP").innerHTML = x + "O&#770" + od;  
+    document.getElementById("myP").innerHTML = x + "O&#770" + od + "&#160;" ;  
     s += "O&#770;" + od ; 
+    s += "&#160;" ;
 }
 //Input od
 function itinod() {
     var x = document.getElementById("myP").innerHTML;
-    document.getElementById("myP").innerHTML = x + "o" + dotr;
+    document.getElementById("myP").innerHTML = x + "o" + dotr + "&#160;" ;
     s += "o" + dotr ;
+/* 
+s += "&#160;" ;
+*/
+    s += "&#8201;" ;
 }
 function odbarin() {
     var x = document.getElementById("myP").innerHTML;
-    document.getElementById("myP").innerHTML = x + "o&#772" + dotr;  
+    document.getElementById("myP").innerHTML = x + "o&#772" + dotr + "&#160;" ;  
     s += "o&#772;" + dotr ; 
+    s += "&#8201;" ;
 }
 function odgravein() {
     var x = document.getElementById("myP").innerHTML;
-    document.getElementById("myP").innerHTML = x + "o&#768" + dotr;
+    document.getElementById("myP").innerHTML = x + "o&#768" + dotr + "&#160;" ;
     s += "o&#768;" + dotr ;   
+    s += "&#8201;" ;
 }
 function odacutein() {
     var x = document.getElementById("myP").innerHTML;
-    document.getElementById("myP").innerHTML = x + "o&#769" + dotr;  
+    document.getElementById("myP").innerHTML = x + "o&#769" + dotr + "&#160;" ;  
     s += "o&#769;" + dotr ; 
+    s += "&#8201;" ;
 }
 function odpehin() {
     var x = document.getElementById("myP").innerHTML;
-    document.getElementById("myP").innerHTML = x + "o&#781" + dotr;  
+    document.getElementById("myP").innerHTML = x + "o&#781" + dotr + "&#160;" ;  
     s += "o&#781;" + dotr ; 
+    s += "&#8201;" ;
 }
 function odlatin() {
     var x = document.getElementById("myP").innerHTML;
-    document.getElementById("myP").innerHTML = x + "o&#770" + dotr;  
+    document.getElementById("myP").innerHTML = x + "o&#770" + dotr + "&#160;" ;  
     s += "o&#770;" + dotr ; 
+    s += "&#8201;" ;
 }
 //Input n
+function barinn() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "n&#772";
+    s += "n&#772;";
+}
 function graveinn() {
     var x = document.getElementById("myP").innerHTML;
     document.getElementById("myP").innerHTML = x + "n&#768;";
@@ -824,10 +845,20 @@ function acuteinn() {
     document.getElementById("myP").innerHTML = x + "n&#769;";
     s += "n&#769;" ;   
 }
+function barinN() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "N&#772";
+    s += "N&#772;";
+}
 function graveinN() {
     var x = document.getElementById("myP").innerHTML;
     document.getElementById("myP").innerHTML = x + "N&#768;";
     s += "N&#768;" ;   
+}
+function acuteinN() {
+    var x = document.getElementById("myP").innerHTML;
+    document.getElementById("myP").innerHTML = x + "N&#769;";
+    s += "N&#769;" ;   
 }
 //Input consonant
 function cons(x) {
