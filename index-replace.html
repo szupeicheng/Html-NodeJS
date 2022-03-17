@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<h2>JavaScript String Methods</h2>
+
+<p>Replace "Microsoft" with "W3Schools" in the paragraph below:</p>
+
+<button onclick="myFunction()">Replace !</button>
+<button onclick="myFunctionU()">Replace U!</button>
+
+<p id="demo">Please visit Microsoft! Go\'{a}n n\={a} t\'{u}-ti\pehin{o}h iu-b\={u}n kan-kh\'{o}{\dtr}, \newline \hspace*{2mm} Go\={a}n Ch\'{u} si-un l\^{a}i kh\`{o}a{\nn}-k\`{o}{\dtr}, \newline H\={o}{\dtr} go\'{a}n chai L\'{\i} kap go\'{a}n khi\={a}-kh\'{\i}, \newline \hspace*{2mm} S\`{u} go\'{a}n kh\`{u}i-l\pehin{a}t \'{e}ng p\'{o}{\dtr}-h\={o}{\dtr}, \newline \hspace*{5mm} Kap go\'{a}n t\={\i}-teh, \newline \hspace*{5mm} Kap go\'{a}n t\={\i}-teh, \newline \hspace*{2mm} L\'{\i} t\pehin{a}k \={u}i kap go\'{a}n t\={\i}-teh.</p>
+
+<script>
+function myFunction() {
+  let text = document.getElementById("demo").innerHTML;
+  
+  //Input a
+  document.getElementById("demo").innerHTML = text.replace(/\\={a}/g, "a&#772;");
+  text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.replace(/\\`{a}/g, "a&#768;");
+  text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.replace(/\\'{a}/g, "a&#769;");
+  text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.replace(/\\pehin{a}/g, "a&#781;");
+  text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.replace(/\\\^{a}/g, "a&#770;");
+  text = document.getElementById("demo").innerHTML;
+
+  //Input e
+  document.getElementById("demo").innerHTML = text.replace(/\\={e}/g, "e&#772;");
+  text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.replace(/\\`{e}/g, "e&#768;");
+  text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.replace(/\\'{e}/g, "e&#769;");
+  text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.replace(/\\pehin{e}/g, "e&#781;");
+  text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.replace(/\\^{e}/g, "e&#770;");
+  text = document.getElementById("demo").innerHTML;
+
+  //Input i
+  document.getElementById("demo").innerHTML = text.replace(/\\={\\i}/g, "i&#772;");
+  text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.replace(/\\`{\\i}/g, "i&#768;");
+  text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.replace(/\\'{\\i}/g, "i&#769;");
+  text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.replace(/\\pehin{\\i}/g, "i&#781;");
+  text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.replace(/\\^{\\i}/g, "i&#770;");
+  text = document.getElementById("demo").innerHTML;
+
+  //Input u
+  document.getElementById("demo").innerHTML = text.replace(/\\={u}/g, "u&#772;");
+  text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.replace(/\\`{u}/g, "u&#768;");
+  text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.replace(/\\'{u}/g, "u&#769;");
+  text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.replace(/\\pehin{u}/g, "u&#781;");
+  text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.replace(/\\^{u}/g, "u&#770;");
+  text = document.getElementById("demo").innerHTML;
+
+  //Input od
+  document.getElementById("demo").innerHTML = text.replace(/o{\\dtr}/g, "o&#856;");
+  text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.replace(/\\={o}{\\dtr}/g, "o&#772;&#856;&#160;");
+  text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.replace(/\\`{o}{\\dtr}/g, "o&#768;&#856;&#160;");
+  text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.replace(/\\'{o}{\\dtr}/g, "o&#769;&#856;&#160;");
+  text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.replace(/\\pehin{o}{\\dtr}/g, "o&#781;&#856;&#160;");
+  text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.replace(/\\^{o}{\\dtr}/g, "o&#770;&#856;&#160;");
+  text = document.getElementById("demo").innerHTML;
+
+  //Input o
+  document.getElementById("demo").innerHTML = text.replace(/\\={o}/g, "o&#772;");
+  text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.replace(/\\`{o}/g, "o&#768;");
+  text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.replace(/\\'{o}/g, "o&#769;");
+  text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.replace(/\\pehin{o}/g, "o&#781;");
+  text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.replace(/\\^{o}/g, "o&#770;");
+  text = document.getElementById("demo").innerHTML;
+
+
+  document.getElementById("demo").innerHTML = text.replace(/Microsoft/i, "W3");
+  text = document.getElementById("demo").innerHTML;
+
+  document.getElementById("demo").innerHTML = text.replace(/{\\nn}/g, "&#8319;");
+  text = document.getElementById("demo").innerHTML;
+
+  document.getElementById("demo").innerHTML = text.replace(/\\newline/g, "<br>");
+
+  
+}
+
+function myFunctionU() {
+  let text = document.getElementById("demo").innerHTML;
+  
+  //Input a
+  document.getElementById("demo").innerHTML = text.replace(/\\={a}/g, "\\u0101");  //a&#772;
+  text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.replace(/\\`{a}/g, "\\u00E0");  //a&#768;
+  text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.replace(/\\'{a}/g, "\\u00E1");  //a&#769;
+  text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.replace(/\\pehin{a}/g, "a\\u030D");  //a&#781;
+  text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.replace(/\\\^{a}/g, "\\u00E2");  //a&#770;
+  text = document.getElementById("demo").innerHTML;
+
+  //Input e
+  document.getElementById("demo").innerHTML = text.replace(/\\={e}/g, "\\u0113");  //e&#772;
+  text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.replace(/\\`{e}/g, "\\u00E8");  //e&#768;
+  text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.replace(/\\'{e}/g, "\\u00E9");  //e&#769;
+  text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.replace(/\\pehin{e}/g, "e\\u030D");  //e&#781;
+  text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.replace(/\\^{e}/g, "\\u00EA");  //e&#770;
+  text = document.getElementById("demo").innerHTML;
+
+  //Input i
+  document.getElementById("demo").innerHTML = text.replace(/\\={\\i}/g, "\\u012B");  //i&#772;
+  text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.replace(/\\`{\\i}/g, "\\u00EC");  //i&#768;
+  text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.replace(/\\'{\\i}/g, "\\u00ED");  //i&#769;
+  text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.replace(/\\pehin{\\i}/g, "i\\u030D");  //&#781;
+  text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.replace(/\\^{\\i}/g, "\\u00EE");  //i&#770;
+  text = document.getElementById("demo").innerHTML;
+
+  //Input u
+  document.getElementById("demo").innerHTML = text.replace(/\\={u}/g, "\\u016B"); 
+  text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.replace(/\\`{u}/g, "\\u00F9");
+  text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.replace(/\\'{u}/g, "\\u00FA");
+  text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.replace(/\\pehin{u}/g, "u\\u030D");
+  text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.replace(/\\^{u}/g, "\\u00FB");
+  text = document.getElementById("demo").innerHTML;
+
+  //Input od
+  document.getElementById("demo").innerHTML = text.replace(/o{\\dtr}/g, "o\\u0358\\u0020");
+  text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.replace(/\\={o}{\\dtr}/g, "\\u014D\\u0358\\u0020");
+  text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.replace(/\\`{o}{\\dtr}/g, "\\u00F2\\u0358\\u0020");
+  text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.replace(/\\'{o}{\\dtr}/g, "\\u00F3\\u0358\\u0020");
+  text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.replace(/\\pehin{o}{\\dtr}/g, "o\\u030D\\u0358\\u0020");
+  text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.replace(/\\^{o}{\\dtr}/g, "\\u00F4\\u0358\\u0020");
+  text = document.getElementById("demo").innerHTML;
+
+  //Input o
+  document.getElementById("demo").innerHTML = text.replace(/\\={o}/g, "\\u014D");
+  text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.replace(/\\`{o}/g, "\\u00F2");
+  text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.replace(/\\'{o}/g, "\\u00F3");
+  text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.replace(/\\pehin{o}/g, "o\\u030D");
+  text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML = text.replace(/\\^{o}/g, "\\u00F4");
+  text = document.getElementById("demo").innerHTML;
+
+
+  document.getElementById("demo").innerHTML = text.replace(/Microsoft/i, "W3");
+  text = document.getElementById("demo").innerHTML;
+
+  document.getElementById("demo").innerHTML = text.replace(/{\\nn}/g, "&#8319;");
+  text = document.getElementById("demo").innerHTML;
+
+  document.getElementById("demo").innerHTML = text.replace(/\\newline/g, "<br>");
+
+  
+}
+</script>
+
+</body>
+</html>
