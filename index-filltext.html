@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="550" height="170" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+<button onclick="printpage()">Print</button>
+<br>
+<p id="demo"></p>
+<img id="source" width="220" height="277" src="nginx09.jpg" alt="The Source">
+
+<script>
+
+document.getElementById("demo").innerHTML = "G\u00F3a \u00EA Si\u014Dng-t\u00E8, g\u00F3a \u00EA Kun-\u00F4ng, L\u00ED mi\u00E2 g\u00F3a beh \u00E9ng-o\u00E1n chun-ch\u00F4ng, Ch\u00FA I\u00E2-h\u00F4-hoa ch\u00EC-ko\u00E2n ch\u00EC-t\u014Da, B\u014De thang chhek-to\u030Dk, un-h\u016Bi m\u00F3a-m\u00F3a.";
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+
+ctx.font = "20px Georgia";
+//ctx.fillText("Hello World!", 10, 20);
+
+ctx.fillStyle = "hsla(120,100%,25%,0.3)";
+ctx.fillRect(0,0,550,170);
+
+ctx.font = "20px Verdana";
+// Create gradient
+var gradient = ctx.createLinearGradient(0, 0, c.width, 0);
+//gradient.addColorStop("0", "magenta");
+//gradient.addColorStop("0.5", "blue");
+//gradient.addColorStop("1.0", "red");
+
+gradient.addColorStop("0", "hsla(9, 100%, 64%, 0.8)");
+gradient.addColorStop("1.0", "hsla(9, 100%, 64%, 0.8)");
+
+//gradient.addColorStop("0", "hsla(0, 100%, 30%, 0.3)");
+//gradient.addColorStop("1.0", "hsla(0, 100%, 30%, 0.3)");
+
+// Fill with gradient
+ctx.fillStyle = gradient;
+//ctx.fillText("Big smile!", 150, 20);
+
+//ctx.font = "30px Arial";
+ctx.font = "30px Times New Roman";
+ctx.fillText("G\u00F3a \u00EA Si\u014Dng-t\u00E8, g\u00F3a \u00EA Kun-\u00F4ng,",10,50);
+ctx.fillText("L\u00ED mi\u00E2 g\u00F3a beh \u00E9ng-o\u00E1n chun-ch\u00F4ng,",10,80);
+ctx.fillText("Ch\u00FA I\u00E2-h\u00F4-hoa ch\u00EC-ko\u00E2n ch\u00EC-t\u014Da,",10,110);
+ctx.fillText("B\u014De thang chhek-to\u030Dk, un-h\u016Bi m\u00F3a-m\u00F3a.",10, 140);
+
+
+//Print this page
+function printpage() {
+    window.print();
+}
+
+</script>
+
+</body>
+</html>
