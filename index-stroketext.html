@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="4000" height="3600" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+<button onclick="printpage()">Print</button>
+<br>
+<p id="demo"></p>
+
+<script>
+//document.getElementById("demo").innerHTML = "Chheng-ch\u00E1 sim-s\u00EEn kap ji\u030Dt p\u00EE\u207F kh\u00ED, Che l\u00E2ng ha\u030Dp-s\u00EE h\u00ED-lo\u030Dk b\u00F4 p\u00ED, K\u00EC\u207F-tio\u030Dh Si\u014Dng-t\u00E8 \u00EAng-kng \u00EA b\u012Bn, B\u0101n-mi\u030Dh t\u00F9i I s\u00EE-si\u00F4ng o\u0101\u207F sin!"; 
+document.getElementById("demo").innerHTML = "Ki\u00FB L\u00ED chhin-chhi\u016B\u207F t\u014Da hong chhe-l\u00E2i,G\u014D\u0358\u0020-s\u00FBn-choeh \u00EA un-ti\u00E1n ; Si\u00FA\u207F-s\u00F9 thi\u207F-\u0113 b\u0101n-kok b\u0101n-b\u00EEn, L\u00F3ng \u014De kap L\u00ED kiat-li\u00E2n.";
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+
+//ctx.fillStyle = "hsla(120,100%,25%,0.6)";
+ctx.lineWidth = 5 ;
+ctx.fillStyle = "hsla(0, 100%, 1%, 1)";
+//ctx.fillStyle = "hsla(350,60%,70%,0.3)";
+//ctx.fillRect(0,0,4500,1800);
+
+//ctx.font = "20px Georgia";
+//ctx.font = "20px Verdana";
+//ctx.font = "100px Arial";
+ctx.font = "200px Times New Roman";
+ctx.textAlign = "center";     
+
+ctx.strokeText("I\u00E2-so\u0358\u0020 \u00ED-g\u014Da b\u00F4 l\u014D\u0358\u0020, I\u00E2-so\u0358\u0020 t\u012B-chia.",1500,200);
+ctx.fillText("B\u00E9-ch\u00F4 l\u0101i Eng-j\u00EE,",1500,400); 
+ctx.strokeText("M\u00E1-l\u012B-a s\u00F3\u0358\u0020 si\u207F,",1500,800);
+ctx.fillText("B\u0101n-b\u00EEn \u00EA Ch\u00FA-ch\u00E1i\u207F,",1500,1200);
+ctx.fillText("B\u00F4 l\u00E2ng chai,",1500,1600);
+//ctx.textAlign = "left";     
+ctx.fillText("I tam-tng l\u00ED g\u00F3a,",1500,2000);
+ctx.fillText("L\u00F3ng-ch\u00F3ng \u00EA ch\u014De-k\u00F2a,",1500,2400);
+ctx.fillText("Ch\u00E8ng-l\u00E2ng \u00EA k\u00E8-sit,",1500,2800);
+ctx.fillText("L\u00F3ng kui I.",1500,3200);
+
+//ctx.strokeStyle = "hsla(120,100%,25%)";
+//ctx.strokeText("I\u00E2-so\u0358\u0020 \u00ED-g\u014Da b\u00F4 l\u014D\u0358\u0020, I\u00E2-so\u0358\u0020 t\u012B-chia.",50,2000);
+
+//ctx.fillText("Chit s\u00EE tio\u030Dh chi\u016B I\u00E2-so\u0358\u0020, I\u00E2-so\u0358\u0020 t\u012B-chia,",50,400); 
+//ctx.fillText("\u00CD-g\u014Da b\u00F4 pa\u030Dt ti\u00E2u l\u014D\u0358\u0020, I\u00E2-so\u0358\u0020 t\u012B-chia ;",50,800); 
+//ctx.fillText("Ch\u00E8ng-l\u00E2ng l\u00F3ng-ch\u00F3ng tio\u030Dh l\u00E2i,",50,1200);
+//ctx.fillText("Bo\u030Dh-tit i\u00E2n-chhi\u00E2n g\u00EE-ng\u00E1i,",50,1600);
+//ctx.fillText("I\u00E2-so\u0358\u0020 \u00ED-g\u014Da b\u00F4 l\u014D\u0358\u0020, I\u00E2-so\u0358\u0020 t\u012B-chia.",50,2000);
+
+//ctx.fillText("Ki\u00FB L\u00ED chhin-chhi\u016B\u207F t\u014Da hong chhe-l\u00E2i,",50,400); 
+//ctx.fillText("G\u014D\u0358\u0020-s\u00FBn-choeh \u00EA un-ti\u00E1n ;",50,800); 
+//ctx.fillText("Si\u00FA\u207F-s\u00F9 thi\u207F-\u0113 b\u0101n-kok b\u0101n-b\u00EEn,",50,1200); 
+//ctx.fillText("L\u00F3ng \u014De kap L\u00ED kiat-li\u00E2n.",50,1600);
+
+//ctx.fillText("Chheng-ch\u00E1 sim-s\u00EEn kap ji\u030Dt p\u00EE\u207F kh\u00ED,",50,400); 
+//ctx.fillText("Che l\u00E2ng ha\u030Dp-s\u00EE h\u00ED-lo\u030Dk b\u00F4 p\u00ED,",50,800); 
+//ctx.fillText("K\u00EC\u207F-tio\u030Dh Si\u014Dng-t\u00E8 \u00EAng-kng \u00EA b\u012Bn,",50,1200); 
+//ctx.fillText("B\u0101n-mi\u030Dh t\u00F9i I s\u00EE-si\u00F4ng o\u0101\u207F sin!",50,1600);
+
+//Print this page
+function printpage() {
+    window.print();
+}
+
+</script>
+
+</body>
+</html>
